@@ -40,3 +40,7 @@ Make sure that this mount point is persistent across reboots with the correct de
       sudo mkfs.xfs /dev/dba_storage/volume_1
       sudo mount /dev/dba_storage/volume_1 /mnt/dba_storage
       sudo echo "/dev/dba_storage/volume_1 /mnt/dba_storage xfs defaults 0 0" >> /etc/fstab
+
+using fdisk -l
+
+It didnt work, we should use /dev/mapper/dba_storage-volume_1
