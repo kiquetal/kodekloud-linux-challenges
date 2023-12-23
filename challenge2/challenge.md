@@ -31,5 +31,10 @@ the web-app is located in /home/bob/go-app
         sudo systemctl enable nginx
         sudo systemctl start nginx
 
-
+- Add firewall rules to allow only incoming port "22", "80" and "8081".
+  
+        sudo firewall-cmd --add-port=22/tcp --permanent
+        sudo firewall-cmd --add-port=80/tcp --permanent
+        sudo firewall-cmd --add-port=8081/tcp --permanent
+        sudo firewall-cmd --reload
 
